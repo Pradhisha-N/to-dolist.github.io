@@ -1,0 +1,165 @@
+/* General Reset for the page */
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #42606d;
+    font-weight: bold;
+}
+
+/* Styling the body */
+body {
+    width: 100%;
+    height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #e0e8f9; /* Light background to contrast with the frames */
+}
+
+/* Header styling */
+.todo-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #42606d;
+    margin-bottom: 30px; /* Increase the space between heading and the frames */
+}
+
+/* Main container holding all task frames */
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    gap: 40px;
+    margin-top: 50px; /* Space added above the frames */
+}
+
+/* Individual frame for each task section */
+.frame {
+    width: 35%;
+    background: linear-gradient(90deg, rgba(174, 202, 238, 1) 0%, rgba(255, 210, 210, 1) 100%);
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px rgba(128, 128, 128, 0.473);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container for each task list section */
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 5px 10px 20px rgba(128, 128, 128, 0.473);
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Container for the task heading (Daily, Weekly, Monthly) */
+.day-box {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Input section for adding new tasks */
+.add-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input and button styles */
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#input, #input-weekly, #input-monthly {
+    background: #F6F1F1;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: 70%;
+    margin-right: 10px;
+}
+
+#input:focus, #input-weekly:focus, #input-monthly:focus {
+    outline: none;
+}
+
+#btn {
+    padding: 5px 15px;
+    border: none;
+    color: #fff;
+    background: #92baec;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Error messages */
+#error-text, #error-weekly, #error-monthly {
+    font-size: 12px;
+    color: #f76868;
+    margin-top: 5px;
+}
+
+/* Task list styling */
+.lists {
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.tasks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: lowercase;
+    margin-top: 13px;
+}
+
+/* Task list styling for checkbox and label */
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: #92baec;
+    margin-right: 10px;
+}
+
+label {
+    width: calc(100% - 20px);
+}
+
+input:checked ~ label {
+    text-decoration: line-through;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+/* Delete icon styling */
+#action {
+    margin-top: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    color: #f76868;
+}
+
+#action i {
+    margin-right: 5px;
+}

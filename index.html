@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <h1 class="todo-heading">To-Do List</h1> <!-- Heading Added -->
+
+    <div class="main-container">
+        <!-- Daily To-Do -->
+        <div class="frame" id="daily-frame">
+            <div class="container">
+                <div class="day-box">
+                    <p>Daily Tasks</p>
+                </div>
+                <div class="add-list">
+                    <div class="input">
+                        <input type="text" id="input" placeholder="Type here ...">
+                        <button id="btn" onclick="addDailyList()">+</button>
+                    </div>
+                    <p id="error-text"></p>
+                </div>
+                <div id="daily-lists" class="lists"></div>
+            </div>
+        </div>
+
+        <!-- Weekly To-Do -->
+        <div class="frame" id="weekly-frame">
+            <div class="container">
+                <div class="day-box">
+                    <p>Weekly Tasks</p>
+                </div>
+                <div class="add-list">
+                    <div class="input">
+                        <input type="text" id="input-weekly" placeholder="Type here ...">
+                        <button id="btn" onclick="addWeeklyList()">+</button>
+                    </div>
+                    <p id="error-weekly"></p>
+                </div>
+                <div id="weekly-lists" class="lists"></div>
+            </div>
+        </div>
+
+        <!-- Monthly To-Do -->
+        <div class="frame" id="monthly-frame">
+            <div class="container">
+                <div class="day-box">
+                    <p>Monthly Tasks</p>
+                </div>
+                <div class="add-list">
+                    <div class="input">
+                        <input type="text" id="input-monthly" placeholder="Type here ...">
+                        <button id="btn" onclick="addMonthlyList()">+</button>
+                    </div>
+                    <p id="error-monthly"></p>
+                </div>
+                <div id="monthly-lists" class="lists"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
